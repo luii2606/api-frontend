@@ -40,15 +40,17 @@ export const crearTablaCiudades=(info_encabezado,info)=>{
           const btneditar=document.createElement("button");
           btneditar.classList.add("botonesTabla__boton");
           const iconoEdit=document.createElement("i");
-          iconoEdit.classList.add("bi", "bi-pencil-square")
-          btneditar.append(iconoEdit)
+          iconoEdit.classList.add("bx bx-edit-alt")
+            btneditar.append(iconoEdit)
+          btneditar.textContent = "Editar"
           contenbtn.append(btneditar);
 
           const btneliminar=document.createElement("button")
           btneliminar.classList.add("botonesTabla__boton","botonesTabla__boton--rojo");
-          const iconElim=document.createElement("i");
-          iconElim.classList.add("bi","bi-trash-fill")
-          btneliminar.append(iconElim);
+          // const iconElim=document.createElement("i");
+          // iconElim.classList.add("bi","bi-trash-fill")
+        // btneliminar.append(iconElim);
+        btneditar.textContent = "Eliminar"
           contenbtn.append(btneliminar);
 
           Opciones.append(contenbtn);
