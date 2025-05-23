@@ -8,7 +8,7 @@ crearTablaCiudades(["ID","Ciudad"],ciudades.data);
 
 
 const formulario=document.querySelector("form");
-const nombre_ciudad=document.querySelector('[name="ciudad_nombre"]');
+const nombre_ciudad=document.querySelector('[name="ciudad"]');
 
 formulario.addEventListener('submit',(event)=>{validar(event,"ciudades")});
 nombre_ciudad.addEventListener('blur',limpiar)

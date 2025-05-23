@@ -52,7 +52,7 @@ section{
 }
 
 /* Formulario Usuarios */
-.formulario{
+.formulario,.tabla{
   background-color:var(--crema-claro);
   border: solid 3px var(--rojo);
   border-radius: 30px;
@@ -117,15 +117,15 @@ span{
 /* tabla */
 /* .tabla{
   margin: 20px auto;
-  width: 80%;
+  width: 50%;
   border-spacing: 0 10px;
-}
+} */
 
 .tabla__campo{
-  border: solid 1px rgb(5, 5, 5);
+  /* border: solid 3px var(--rojo); */
   text-align: center;
   padding: 15px;
-  color: rgb(216, 208, 208);
+  color: var#000;
   font-weight: 200;
 }
 
@@ -138,13 +138,13 @@ span{
 
 .botonesTabla__boton{
   width: 100%;
-  color: white;
+  color: #000;
   font-size: 100%;
-  border-radius: 5px;
+  border-radius: 4px;
   border: none;
-  background-color: rgb(45, 241, 6);
+  background-color: green;
 }
 
 .botonesTabla__boton--rojo{
-  background-color: red;
-} */
+  background-color: var(--rojo);
+}

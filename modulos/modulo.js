@@ -60,7 +60,7 @@ export const validar = async (event) => {
             // Crear nuevo mensaje de error
             let mensajeerror = document.createElement('span');
             mensajeerror.textContent = `El campo ${campo.getAttribute("name")} no puede estar vacio`;
-            campo.insertAdjacentElement('mensajeerror', mensajeerror);
+            campo.insertAdjacentElement('mensajeerror', afterend);
           } else {
             // Si tiene contenido, validar la función 
             if (validarMinimodos(campo)) {
@@ -82,7 +82,7 @@ export const validar = async (event) => {
             if (campo.nextElementSibling) campo.nextElementSibling.remove();
             let mensajeerror = document.createElement('span');
             mensajeerror.textContent = `El campo ${campo.getAttribute("name")} no puede estar vacio`;
-            campo.insertAdjacentElement('mensajeerror', mensajeerror);
+            campo.insertAdjacentElement('mensajeerror', afterend);
           }
           else {
             // Si tiene contenido, validar la función 
@@ -283,7 +283,7 @@ export const validarContrasenaMensaje=event=>{
 }
 //Cuenta campos requeridos en un formulario.
 const contarCampos=formulario=>{
-  const campos=formulario.querySelectorAll(".padre_input");
+  const campos=formulario.querySelectorAll(".input");
   return campos.length;
 }
 

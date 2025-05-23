@@ -18,9 +18,9 @@ const nombre_usuario=document.querySelector('[name="nombre"]');
 const apellido_usuario=document.querySelector('[name="apellido"]');
 const telefono_usuario=document.querySelector('#telefono');
 const constrasenia_usuario=document.querySelector('[name="contrasena"]')
-const ciudad_usuario=document.querySelector('[name="id_ciudad"]')
-const radios_genero=document.querySelectorAll('[name="id_genero"]')
-const cheboxs_lenguajes=document.querySelectorAll('[name="id_lenguaje"]')
+const ciudad_usuario=document.querySelector('[name="ciudad"]')
+const radios_genero=document.querySelectorAll('[name="genero"]')
+const cheboxs_lenguajes=document.querySelectorAll('[name="lenguaje"]')
 
 
 
