@@ -46,9 +46,9 @@ export const crearTablaGeneros=(info_encabezado,info)=>{
 
         const btneliminar=document.createElement("button")
         btneliminar.classList.add("botonesTabla__boton","botonesTabla__boton--rojo");
-        // const iconElim=document.createElement("i");
-        // iconElim.classList.add("bi","bi-trash-fill")
-        // btneliminar.append(iconElim);
+        const iconElim=document.createElement("i");
+        iconElim.classList.add("bx","bx-trash")
+        btneliminar.append(iconElim);
         contenbtn.append(btneliminar);
 
         Opciones.append(contenbtn);

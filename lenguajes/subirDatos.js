@@ -40,16 +40,16 @@ export const crearTablaLenguajes=(info_encabezado,info)=>{
 
         const btneditar=document.createElement("button");
         btneditar.classList.add("botonesTabla__boton");
-        // const iconoEdit=document.createElement("i");
-        // iconoEdit.classList.add("bi", "bi-pencil-square")
+        const iconoEdit=document.createElement("i");
+        iconoEdit.classList.add("bx", "bx-edit-alt")
         btneditar.append(iconoEdit)
         contenbtn.append(btneditar);
 
         const btneliminar=document.createElement("button")
         btneliminar.classList.add("botonesTabla__boton","botonesTabla__boton--rojo");
-        // const iconElim=document.createElement("i");
-        // iconElim.classList.add("bi","bi-trash-fill")
-        // btneliminar.append(iconElim);
+        const iconElim=document.createElement("i");
+        iconElim.classList.add("bx","bx-trash")
+        btneliminar.append(iconElim);
         contenbtn.append(btneliminar);
 
         Opciones.append(contenbtn);
