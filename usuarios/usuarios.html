@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Formulario Usuarios</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header class="encabezado">
@@ -12,13 +12,13 @@
       <h1>Api</h1>
     </div>
     <div class="content-seccion">
-      <a href="usuarios.html" class="seccion-items">Usuarios</a>
-      <a href="ciudades.html" class="seccion-items">Ciudades</a>
-      <a href="generos.html" class="seccion-items">Generos</a>
-      <a href="lenguajes.html" class="seccion-items">Lenguajes</a>
+      <a href="../usuarios/usuarios.html" class="seccion-items">Usuarios</a>
+      <a href="../ciudades/ciudades.html" class="seccion-items">Ciudades</a>
+      <a href="../generos/generos.html" class="seccion-items">Géneros</a>
+      <a href="../lenguajes/lenguajes.html" class="seccion-items">Lenguajes</a>
     </div>
   </header>
-  <form action="#" class="formulario"novalidate autocomplete="off">
+  <form action="#" id="formulario" class="formulario"novalidate autocomplete="off">
     <div class="content-title">
       <h1 class="title">Usuarios</h1>
     </div>
@@ -35,28 +35,28 @@
       <input type="number" class ="input-group" name="documento" placeholder="Documento" required>
     </div>
     <select name="ciudad" class ="input-group" id="ciudad" required>
-      <option>Selección</option>
-      <option value="1">Bucaramanga</option>
+     <option>Selección</option>
+      <!-- <option value="1">Bucaramanga</option>
       <option value="2">Florida</option>
-      <option value="3">Giron</option>
+      <option value="3">Giron</option> -->
     </select>
     <div class="input">
       <input type="password" class ="input-group" name="contrasena" placeholder="Contraseña">
     </div>
     <span class="text-clasi">Selecciona tu género</span>
-    <div class="content-generos">
-      <div class="genero">
+    <div class="content-generos"  id="genero">
+      <!-- <div class="genero__padre">
         <input type="radio" class ="input-radio" name="genero" id="hombre" value="1" required>
         <label for="hombre">Hombre</label>
       </div>
-      <div class="genero">
+      <div class="genero__padre">
         <input type="radio" class ="input-radio" name="genero" id="mujer" value="2" required>
         <label for="mujer">Mujer</label>
-      </div>
+      </div> -->
     </div>
     <span class="text-clasi">Habilidades</span>
-    <div class="checkbox">
-      <input type="checkbox" name="Habilidades[]" id="html" value="1" required>
+    <div class="checkboxs" id="checkbox">
+      <!-- <input type="checkbox" name="Habilidades[]" id="html" value="1" required>
       <label for="html">Html</label>
 
       <input type="checkbox" name="Habilidades[]" id="css"value="2" required>
@@ -64,9 +64,12 @@
 
       <input type="checkbox" name="Habilidades[]" id="js" value="3" required>
       <label for="js">Javascript</label>
+
+      <input type="checkbox" name="Habilidades[]" id="js" value="4" required>
+      <label for="c#">C#</label> -->
     </div>
     <button type="submit" id="btn_guardar" class="btn-guardar">Guardar</button>
   </form>
-  <script type="module" src="./validaciones/usuarios.js"></script>
+  <script type="module" src="../usuarios/usuarios.js"></script>
 </body>
 </html>
