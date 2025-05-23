@@ -16,7 +16,7 @@ export const subirCiudades = async () => {
 
 export const subirGeneros = async () => {
   const generos = await get('generos');
-  const padreRadios = document.querySelector('#genero');
+  // const padreRadios = document.querySelector('#nombre_genero');
 
   if (generos.data.length > 0) {
     padreRadios.classList.add("content-generos");
@@ -46,12 +46,15 @@ export const subirGeneros = async () => {
 
 export const subirLenguajes = async () => {
   const lenguajes = await get('lenguajes');
-
   const padreLenguajes = document.querySelector("#checkbox");
+
   console.log(padreLenguajes);
 
+
   if (lenguajes.data.length > 0) {
+
     padreLenguajes.classList.add("checkboxs");
+
     lenguajes.data.forEach(lenguaje => {
       let formcheck = document.createElement('div');
       formcheck.classList.add("checkbox");
@@ -122,7 +125,7 @@ export const crearTablaUsuarios = async (info) => {
       else {
         if (llave == "id_ciudad") {
           ciudades.data.forEach(ciudad => {
-            if (ciudad.ciudad_id == registro[llave]) campoCuerpo.textContent = ciudad.ciudad_nombre;
+            if (ciudad.ciudad_id == registro[llave]) campoCuerpo.textContent = ciudad.ciu;
           });
         }
         if (llave == "id_genero") {

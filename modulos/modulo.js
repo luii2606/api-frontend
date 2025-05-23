@@ -82,7 +82,7 @@ export const validar = async (event) => {
             if (campo.nextElementSibling) campo.nextElementSibling.remove();
             // Crear nuevo mensaje de error
             campo.insertAdjacentElement('afterend', span);
-            console.log(campo.nextSibling);
+            console.log(campo.nextElementSibling);
 
           } else {
             // Si tiene contenido, validar la función 
@@ -124,13 +124,13 @@ export const validar = async (event) => {
           // Mostrar error
           campo.classList.add("border-red");
 
-          // Eliminar mensaje anterior si existe
-          if (!campo.previousElementSibling) campo.previousElementSibling.remove();
-
           // Crear nuevo mensaje de error
           let mensajeerror = document.createElement('span');
           mensajeerror.textContent = "Debe seleccionar un elemento";
-          campo.insertAdjacentElement('mensajeerror', mensajeerror);
+          campo.insertAdjacentElement('afterend', mensajeerror);
+          // Eliminar mensaje anterior si existe
+          if (campo.previousElementSibling) campo.nextElementSibling.remove();
+
         } else {
           // Si tiene selección válida, guardar en objeto info
           let propiedad = campo.getAttribute('name');
@@ -161,10 +161,12 @@ export const validar = async (event) => {
       let par = radios[0].parentElement;
       let contenRadios = par.parentElement;
       contenRadios.classList.add("border-red");
-      if (contenRadios.nextElementSibling) contenRadios.nextElementSibling.remove();
       let afterend = document.createElement('span');
       afterend.textContent = "Debe seleccionar un genero"
       contenRadios.insertAdjacentElement('afterend', afterend);
+      if (contenRadios.nextElementSibling) contenRadios.nextElementSibling.remove();
+      console.log(contenRadios.nextElementSibling);
+
     }
   }
   //Filtra y obtiene solo los campos de tipo checkbox de un arreglo llamado campos (que contiene todos los campos de un formulario).
@@ -179,10 +181,10 @@ export const validar = async (event) => {
       let papi = checkboxs[0].parentElement;
       let padre_checkboxs = papi.parentElement;
       padre_checkboxs.classList.add("border-red")
-      if (padre_checkboxs.nextElementSibling) padre_checkboxs.nextElementSibling.remove();
-      let afterend = document.createElement('span');
-      afterend.textContent = "Debe seleccionar minimo 3 lenguajes"
-      padre_checkboxs.insertAdjacentElement('afterend', afterend);
+      let span = document.createElement('span');
+      span.textContent = "Debe seleccionar minimo 3 lenguajes"
+      padre_checkboxs.insertAdjacentElement('afterend', span);
+      // if (padre_checkboxs.nextElementSibling) padre_checkboxs.nextElementSibling.remove();
     }
     //Si hay 3 o MÁS seleccionados recoge sus valores en un array guarda el array en el objeto info usando el atributo 'name' como clave
     else {
