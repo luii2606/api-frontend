@@ -89,7 +89,7 @@ section{
   margin-bottom: 5px;
   
 }
-.checkbox{
+.checkboxs{
   display: flex;
   align-items: center;
   margin: 5px;
@@ -114,3 +114,37 @@ span{
   font-size: 80%;
   text-align: center;
 }
+/* tabla */
+/* .tabla{
+  margin: 20px auto;
+  width: 80%;
+  border-spacing: 0 10px;
+}
+
+.tabla__campo{
+  border: solid 1px rgb(5, 5, 5);
+  text-align: center;
+  padding: 15px;
+  color: rgb(216, 208, 208);
+  font-weight: 200;
+}
+
+.botonesTabla{
+  width: 100%;
+  height:4vh;
+  display: flex;
+  gap: 10%;
+}
+
+.botonesTabla__boton{
+  width: 100%;
+  color: white;
+  font-size: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(45, 241, 6);
+}
+
+.botonesTabla__boton--rojo{
+  background-color: red;
+} */

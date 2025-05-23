@@ -48,11 +48,10 @@ export const subirLenguajes=async()=>{
   const lenguajes = await get('lenguajes');
 
     const padreLenguajes=document.querySelector("#checkbox");
+console.log(padreLenguajes);
 
     if(lenguajes.data.length>0){
       padreLenguajes.classList.add("checkboxs");
-
-
         lenguajes.data.forEach(lenguaje => {
             let formcheck=document.createElement('div');
             formcheck.classList.add("checkbox");
